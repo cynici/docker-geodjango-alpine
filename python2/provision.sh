@@ -57,6 +57,7 @@ make -s install
 # ===================================================================
 apk add py-mysqldb
 pip install --no-cache-dir django psycopg2 PyMySQL
+pip install --no-cache-dir raven --upgrade
 
 
 # Clean up packages
