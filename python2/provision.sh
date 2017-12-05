@@ -10,6 +10,10 @@ PROJ_VERSION=4.9.2
 PROJ_DATUMGRID_VERSION=1.5
 GDAL_VERSION=1.11.2
 
+# The Django 1.11.x series is the last to support Python 2.7.
+# https://docs.djangoproject.com/en/2.0/releases/2.0/
+DJANGO_VERSION=1.11
+
 
 # Install build packages
 # ===================================================================
@@ -56,7 +60,7 @@ make -s install
 # Install django and database packages
 # ===================================================================
 apk add py-mysqldb
-pip install --no-cache-dir django psycopg2 PyMySQL
+pip install --no-cache-dir django==$DJANGO_VERSION psycopg2 PyMySQL
 pip install --no-cache-dir raven --upgrade
 
 
